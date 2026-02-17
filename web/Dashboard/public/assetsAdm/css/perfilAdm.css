@@ -1,0 +1,543 @@
+/*------------------------------Template------------------------------*/
+.navbar {
+    display: none;
+}
+
+.tema {
+    position: absolute;
+    right: 1vh;
+    bottom: 1vh;
+    width: 8vh;
+    cursor: pointer;
+}
+
+/*------------------------------Formulário------------------------------*/
+.container-perfil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+}
+
+.container-from {
+    width: 80%;
+    height: 70%;
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-top-left-radius: 5vh;
+    border-bottom-left-radius: 5vh;
+    border-bottom-right-radius: 7vh;
+    box-shadow: 0 0.1852vh 0.0926vh rgba(0, 0, 0, 0.575);
+    color: #333;
+}
+
+.div-top-perfil {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto-perfil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 90%;
+    overflow: hidden;
+    position: relative;
+}
+
+.img-perfil {
+    width: 40vh;
+    height: 40vh;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    border: 0.3vh solid transparent;
+    position: relative;
+    object-fit: cover;
+}
+
+/* Estado normal (quando os campos estão desabilitados) */
+.foto-perfil:not(.active) .img-perfil {
+    filter: opacity(40%);
+    cursor: not-allowed;
+}
+
+.foto-perfil:not(.active) .overlay-text {
+    display: none;
+}
+
+/* Estado ativo (quando os campos estão habilitados) */
+.foto-perfil.active .img-perfil {
+    filter: opacity(100%);
+    cursor: pointer;
+}
+
+/* Hover apenas quando ativo - EFEITO PRINCIPAL */
+.foto-perfil.active .img-perfil:hover {
+    filter: brightness(40%);
+    transform: translateY(3px);
+}
+
+/* Texto "Editar Imagem" - APENAS NO HOVER DA IMAGEM */
+.foto-perfil.active .img-perfil:hover::after {
+    content: "Editar Imagem";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 2.5vh;
+    pointer-events: none;
+    z-index: 10;
+    white-space: nowrap;
+}
+
+/* Alternativa: Se o ::after não funcionar, use esta versão */
+.foto-perfil.active .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 2.5vh;
+    pointer-events: none;
+    z-index: 10;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.foto-perfil.active .img-perfil:hover + .overlay-text,
+.foto-perfil.active .overlay-text:hover {
+    opacity: 1;
+}
+
+/* Efeito de overlay quando não ativo */
+.foto-perfil:not(.active)::before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    cursor: not-allowed;
+    z-index: 1;
+}
+
+/* Resto do seu CSS permanece igual */
+.inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 60%;
+    height: 100%;
+}
+
+.inpts {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;
+}
+
+.input-container {
+    display: flex;
+    position: relative;
+    height: 35%;
+    width: 50%;
+}
+
+.input-field {
+    width: 80%;
+    border: none;
+    background-color: #e1e1e1;
+    border-radius: 1vh;
+    font-size: 2.3vh;
+    padding: 1vh;
+    padding-left: 1.4vh;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+    color: rgb(0, 0, 0);
+}
+
+.input-field:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 0.4vh #4a90e233;
+    outline: none;
+}
+
+.input-label {
+    position: absolute;
+    left: 1vh;
+    top: 1.5vh;
+    font-size: 2.3vh;
+    color: #666;
+    transition: all 0.2s;
+    pointer-events: none;
+    padding: 0 4px;
+    margin-left: -0.2vh;
+}
+
+.input-field:focus + .input-label,
+.input-field:not(:placeholder-shown) + .input-label {
+    top: -2.4vh;
+    font-size: 2vh;
+}
+
+/* Estilo inicial para campos desabilitados */
+.input-field:disabled {
+    filter: opacity(40%);
+    cursor: not-allowed;
+}
+
+/* Estilo inicial para todos os elementos desabilitados */
+.input-field:disabled {
+    filter: opacity(40%);
+    cursor: not-allowed;
+}
+
+.input-label {
+    cursor: text;
+    filter: opacity(40%);
+    cursor: not-allowed;
+}
+
+/* Campo de senha sempre desabilitado */
+.input-field[type="password"] {
+    filter: opacity(40%) !important;
+    cursor: not-allowed !important;
+}
+
+/* Labels do campo de senha sempre com opacidade */
+.input-container:has(input[type="password"]) .input-label {
+    filter: opacity(40%) !important;
+    cursor: not-allowed !important;
+}
+
+.troca-senha:not(.enabled) {
+    filter: opacity(40%);
+    cursor: not-allowed;
+}
+
+.troca-senha.enabled {
+    filter: opacity(100%);
+    cursor: pointer;
+}
+
+#salva:disabled {
+    filter: opacity(40%);
+    cursor: not-allowed;
+}
+
+/* Estilo para quando os campos estão ativos */
+.input-field:not(:disabled) {
+    filter: opacity(100%);
+    cursor: text;
+}
+
+.input-label.active {
+    filter: opacity(100%) !important;
+    cursor: text !important;
+}
+
+.troca-senha {
+    position: absolute;
+    top: 5.9vh;
+    cursor: pointer;
+    font-size: 2vh;
+    color: #007aff;
+    transition: all 0.3s ease-in-out;
+}
+
+.troca-senha:hover {
+    text-decoration: underline;
+}
+
+.botao {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.botao button {
+    margin: 4vh 10vh;
+    border: none;
+    width: 20%;
+    height: 40%;
+    color: white;
+    background-color: #1a4579;
+    border-radius: 1vh;
+    transition: all 0.3s ease-in-out;
+    font-size: 2vh;
+}
+
+.botao button:hover {
+    transform: translateY(3px);
+    filter: brightness(60%);
+    cursor: pointer;
+}
+
+.editar {
+    position: relative;
+    width: 4.5vh;
+    height: 4.5vh;
+    bottom: 40%;
+    left: 94%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.editar img {
+    width: 100%;
+    height: 100%;
+}
+
+.editar:hover {
+    transform: translateY(1px);
+    filter: opacity(70%);
+}
+
+/* modal (restante do seu CSS permanece igual) */
+.container-modal {
+    position: fixed;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.575);
+    z-index: 1000;
+}
+
+.container-modal.action {
+    display: flex;
+}
+
+/* modal */
+
+.container-modal {
+    position: fixed;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    font-family: "Poppins", sans-serif;
+}
+
+.container-modal.action {
+    display: flex;
+}
+
+.container-modal2 {
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.575);
+    z-index: 1000;
+}
+
+.containerTrocarSenha {
+    width: 50%;
+    height: 60%;
+    background-color: white;
+    border-radius: 2vh;
+    overflow: hidden;
+}
+
+.trocaTema {
+    display: flex;
+    width: 40%;
+    height: 50%;
+    background-color: white;
+    border-radius: 2vh;
+    overflow: hidden;
+}
+
+.card-padrao {
+    display: flex;
+    justify-content: center;
+    width: 33.3%;
+}
+
+.tabelaTema {
+    width: 70%;
+    height: 70%;
+    margin-top: 5vh;
+    border: 1px solid black;
+    border-radius: 2vh;
+}
+
+.titulo {
+    height: 15%;
+    background-color: #1a4579;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 3vh;
+    padding-right: 3vh;
+}
+
+.h1-titulo {
+    color: white;
+    font-size: 4.5vh;
+}
+
+.x {
+    width: 5%;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.x:hover {
+    filter: brightness(60%);
+    transform: translateY(2px);
+}
+
+.trocaSenha {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 1.5vh;
+    margin-top: 0.5vh;
+    height: 0.2vh; /* altura fixa aproximada */
+    transition: opacity 0.3s ease;
+    margin-left: 17vh;
+}
+
+.input-container2 {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    height: 33%;
+    position: relative;
+}
+
+.input-field2 {
+    width: 70%;
+    border: none;
+    border-radius: 1vh;
+    background-color: rgb(222, 222, 222);
+    font-size: 2.5vh;
+    height: 50%;
+    padding: 1vh;
+    padding-left: 2vh;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.input-field2:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 0.4vh #4a90e233;
+    outline: none;
+}
+
+.input-label2 {
+    position: absolute;
+    left: 16%;
+    top: 63%;
+    font-size: 2.5vh;
+    color: #666;
+    transition: all 0.2s;
+    pointer-events: none;
+    padding: 0 4px;
+    margin-left: -4px;
+}
+
+.input-field2:focus + .input-label2,
+.input-field2:not(:placeholder-shown) + .input-label2 {
+    top: 3.2vh;
+    font-size: 2vh;
+}
+
+.botoes-modal {
+    display: flex;
+    width: 100%;
+    height: 15%;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-from {
+    width: 15%;
+    height: 60%;
+    font-size: 2.5vh;
+    border-radius: 0.8vh;
+    border: 0;
+    background-color: #1a4579;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.button-from:hover {
+    filter: brightness(60%);
+    transform: translateY(2px);
+}
+
+.foto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80%;
+}
+
+.iconSistema {
+    width: 15vh;
+}
+
+.aescuro {
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+}
+
+.btn-confirm {
+    background-color: #1a4579 !important;
+    color: white !important;
+    padding: 1.5vh 3vh !important;
+    font-size: 2vh !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.btn-cancel {
+    background-color: #616161 !important;
+    color: white !important;
+    padding: 1.5vh 3vh !important;
+    font-size: 2vh !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}

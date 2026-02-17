@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito';
+}
+
+#container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+/* Lado esquerdo - Branding */
+#ladoA {
+    width: 50%;
+    height: 100%;
+    background-color: #E9ECF6;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#ladoA-conteudo {
+    width: 80%;
+    height: 90%;
+    background-color: #F5F7FB;
+    border-top-left-radius: 3vh;
+    border-bottom-left-radius: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.icon {
+    width: 60%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.tito {
+    font-size: 3vh;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+/* Lado direito - Login */
+#ladoB {
+    width: 50%;
+    height: 100%;
+    background-color: #0e1a3b;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#ladoB-conteudo {
+    width: 80%;
+    height: 90%;
+    background-color: #2f4d7d;
+    border-top-right-radius: 3vh;
+    border-bottom-right-radius: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Formulário */
+form {
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#titulo {
+    width: 90%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vh;
+    font-weight: bold;
+    margin-bottom: 2vh;
+    color: #e2e2e2;
+}
+
+label {
+    color: #e2e2e2;
+    font-size: 2vh;
+    margin-bottom: 0.5vh;
+    align-self: flex-start;
+}
+
+.inputs {
+    width: 70%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1vh;
+    position: relative;
+    /* espaço reservado para erros */
+    padding-bottom: 2vh;
+}
+
+/* Ícone do cadeado */
+.cadeado {
+    position: absolute;
+    right: 1.5vh;
+    top: 7.5vh;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Campos de input */
+.inpt {
+    border: none;
+    outline: none;
+    height: 40%;
+    padding: 5%;
+    padding-right: 12%;
+    border-radius: 1vh;
+    font-size: 2vh;
+    background-color: white;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.inpt:focus, .inptL:focus {
+    transition: 0.3s;
+    box-shadow: 0px 1px 5px 0px #5b96ee;
+}
+
+/* Estados de input */
+.input-error {
+    border: 0.3vh solid #dc3545 !important;
+    background-color: #fff5f5;
+}
+
+.input-success {
+    border: 0.3vh solid #28a745 !important;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 1.5vh;
+    margin-top: 0.5vh;
+    opacity: 0;
+    height: 0.2vh; /* altura fixa aproximada */
+    transition: opacity 0.3s ease;
+}
+
+.error-message.show {
+    opacity: 1;
+}
+
+/* Alerta */
+.alert {
+    color: #dc3545;
+    font-size: 2vh;
+    margin-bottom: 1vh;
+    height: 1vh;
+    text-align: center;
+    width: 70%;
+}
+
+/* Botão */
+.inptLB {
+    border: none;
+    color: white;
+    background-color: #1E3A8A;
+    height: 100%;
+    width: 100%;
+    border-radius: 1vh;
+    font-size: 2vh;
+    box-shadow: 0 0 5px #1E3A8A;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.inptLB:hover {
+    transform: translateY(3px);
+    box-shadow: 0 3px 8px #1E3A8A;
+    background-color: #1E40AF;
+}

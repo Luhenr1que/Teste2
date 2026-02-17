@@ -1,0 +1,1045 @@
+.tema-escuro {
+    --cor-primaria: #1F4E8C;       
+    --cor-secundaria: #8B2E26;      
+    --cor-fundo: #1B1E24;           
+    --cor-fundo2: #24282F;          
+    --cor-fundoTable1: #2C3440;     
+    --cor-fundoTable2: #1F252D;     
+    --cor-texto: #E5E7EB;           
+    --cor-borda: #2D333B;           
+    --cor-card: #223041;            
+    --cor-verde: #27ae60;
+    --cor-vermelho: #e74c3c;
+    --cor-cinza: #7f8c8d;
+    --cor-naoEditavel: #2A5A88;     
+    --cor-iamgem: brightness(0) invert(1);
+}
+
+
+.tema-claro {
+    --cor-primaria: #1a4579;
+    --cor-secundaria: #c0392b;
+    --cor-fundo: #dddddd;
+    --cor-texto: #333333;
+    --cor-borda: #e0e0e0;
+    --cor-card: blue;
+    --cor-fundo2: rgb(255, 255, 255);
+    --cor-fundoTable1: #e7f6ff;
+    --cor-fundoTable2: #ffffff;;
+    --cor-verde: #27ae60;
+    --cor-vermelho: #e74c3c;
+    --cor-cinza: #7f8c8d;
+    --cor-naoEditavel: rgb(185, 225, 241);
+}
+
+body {
+    background-color: var(--cor-fundo);
+}
+
+.barra-lateral {
+    background-color: var(--cor-primaria);
+}
+
+.barra-vertical {
+    background-color: var(--cor-primaria);
+}
+
+.cardTema {
+    border: 5px solid var(--cor-card);
+}
+
+/* Dashboard */
+.containerHome{
+    background-color: var(--cor-primaria) !important;
+}
+
+.caixa-info{
+    background-color: var(--cor-primaria) !important;
+}
+
+.label-graficoTex{
+    color: var(--cor-texto) !important;
+}
+
+.iconGrafico{
+
+}
+
+/* Tabela Usuários */
+
+/* ALTERNÂNCIA — só afeta TD e TH fora do thead */
+.tabela-usuarios tbody td:nth-child(odd),
+.tabela-usuarios tbody th:nth-child(odd) {
+    background-color: var(--cor-fundoTable1) !important;
+}
+
+.tabela-usuarios tbody td:nth-child(even),
+.tabela-usuarios tbody th:nth-child(even) {
+    background-color: var(--cor-fundoTable2) !important;
+}
+
+/* THEAD — prioridade máxima */
+.tabela-usuarios thead tr,
+.tabela-usuarios thead th {
+    background-color: var(--cor-primaria) !important;
+    padding: 2vh !important;
+    color: #fff !important;
+    border: none !important;
+}
+.td-nome,.td-condicao,.td-email,.td-crm,.td-cpf,.td-status,.td-acoes,
+.th-nome,.th-condicao,.th-email,.th-crm,.th-cpf,.th-status,.th-acoes{
+    font-size: 2vh !important;
+    color: var(--cor-texto) !important;
+}
+.Verde{
+    color: var(--cor-verde) !important;
+    text-transform: capitalize !important;
+    font-weight: bold !important;
+}
+.Vermelho{
+    color: var(--cor-vermelho) !important;
+    text-transform: capitalize !important;
+    font-weight: bold !important;
+}
+.Cinza{
+    color: var(--cor-cinza) !important;
+    text-transform: capitalize !important;
+    font-weight: bold !important;
+}
+.label-titulo{
+    color: var(--cor-texto) !important;
+}
+
+.containerVer{
+    background-color: var(--cor-fundo2) !important;
+}
+
+.esqueda{
+    background-color: var(--cor-naoEditavel) !important;
+}
+
+.tituloVer{
+    color: var(--cor-texto) !important;
+}
+
+
+.tema-escuro .paginacao-info {
+    color: var(--cor-texto);
+}
+
+.tema-escuro .page-item .page-link {
+    background-color: var(--cor-fundoTable1);
+    border-color: var(--cor-borda);
+    color: var(--cor-texto);
+}
+
+.tema-escuro .page-item:not(.disabled):not(.active) .page-link:hover {
+    background-color: var(--cor-primaria);
+    border-color: var(--cor-primaria);
+    color: var(--cor-texto);
+}
+
+.tema-escuro .page-item.active .page-link {
+    background-color: var(--cor-primaria) !important;
+    border-color: var(--cor-primaria) !important;
+    color: white !important;
+}
+
+.tema-escuro .page-item.disabled .page-link {
+    background-color: var(--cor-fundoTable2);
+    border-color: var(--cor-borda);
+    color: var(--cor-cinza);
+}
+
+.tema-escuro .page-input {
+    background-color: var(--cor-fundoTable1);
+    border-color: var(--cor-primaria);
+    color: var(--cor-texto);
+}
+
+.tema-escuro .page-input::placeholder {
+    color: var(--cor-cinza);
+}
+
+.tema-escuro .page-input:focus {
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 0.4vh rgba(26, 69, 121, 0.3);
+}
+
+/* MODAL - Modo Escuro */
+.tema-escuro .containerVer {
+    background-color: var(--cor-fundo2);
+    color: var(--cor-texto);
+}
+
+.tema-escuro .esqueda {
+    background-color: var(--cor-naoEditavel);
+}
+
+.tema-escuro .input-field {
+    background-color: var(--cor-fundoTable1);
+    color: var(--cor-texto);
+    border: 0.1vh solid var(--cor-borda);
+}
+
+.tema-escuro .input-field:disabled {
+    background-color: var(--cor-fundoTable2);
+    color: var(--cor-texto);
+}
+
+.tema-escuro .input-label {
+    color: var(--cor-texto);
+    background-color: var(--cor-naoEditavel);
+}
+
+.tema-escuro .input-field2 {
+    background-color: var(--cor-fundoTable1);
+    color: var(--cor-texto);
+    border: 0.1vh solid var(--cor-borda);
+}
+
+.tema-escuro .input-field2:focus {
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 0.4vh rgba(26, 69, 121, 0.3);
+}
+
+.tema-escuro .input-label {
+    background-color: var(--cor-fundoTable1) !important;
+}
+
+.tema-escuro .input-label2 {
+    color: var(--cor-texto);
+    background-color: transparent !important;
+}
+
+.tema-escuro .tituloVer {
+    color: var(--cor-texto);
+}
+
+/* BOTÕES DO MODAL - Modo Escuro */
+.tema-escuro .btn-confirm {
+    background-color: var(--cor-primaria) !important;
+    color: white !important;
+}
+
+.tema-escuro .btn-cancel {
+    background-color: var(--cor-cinza) !important;
+    color: white !important;
+}
+
+/* CARDS KPI - Modo Escuro */
+.tema-escuro .cardA {
+    background-color: var(--cor-primaria);
+}
+
+.tema-escuro .label-card,
+.tema-escuro .label-dados {
+    color: var(--cor-texto);
+}
+
+/* INPUTS E FILTROS - Modo Escuro */
+.tema-escuro .seletStyle {
+    background-color: var(--cor-fundoTable1);
+    color: var(--cor-texto);
+    border: 0.1vh solid var(--cor-borda);
+}
+
+.tema-escuro .seletStyle:focus {
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 0.4vh rgba(26, 69, 121, 0.3);
+}
+
+.tema-escuro .filtro-usuario {
+    background-color: var(--cor-fundoTable1);
+    color: var(--cor-texto);
+    border: 0.1vh solid var(--cor-borda);
+}
+
+.tema-escuro .filtro-usuario::placeholder {
+    color: var(--cor-cinza);
+}
+
+.tema-escuro .filtro-usuario:focus {
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 0.4vh rgba(26, 69, 121, 0.3);
+}
+
+/* ELEMENTOS GERAIS - Modo Escuro */
+.tema-escuro .erro {
+    color: var(--cor-cinza);
+}
+
+.tema-escuro .azul {
+    filter: brightness(0.8);
+}
+/* NOTÍCIAS E APROVAÇÃO - Modo Escuro */
+.tema-escuro #aprovacao {
+    background-color: rgba(16, 42, 98, 0.3);
+    color: var(--cor-texto);
+}
+
+.tema-escuro .filtro-header {
+    background-color: var(--cor-fundoTable1);
+    color: var(--cor-texto);
+    border-bottom-color: var(--cor-borda);
+}
+
+.tema-escuro .filtro-linha {
+    border-bottom-color: var(--cor-borda);
+    color: var(--cor-texto);
+}
+
+.tema-escuro .filtro-linha:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.tema-escuro .sem-resultados {
+    color: var(--cor-cinza);
+}
+.tema-escuro .cards-estilo-noticias {
+    background-color: var(--cor-fundo);
+}
+
+.tema-escuro .container {
+    background-color: var(--cor-fundo);
+}
+
+.tema-escuro .boa {
+    background-color: var(--cor-fundoTable1);
+    color: var(--cor-texto);
+    border-color: var(--cor-borda);
+}
+
+
+.tema-escuro .select-buscar {
+    background-color: var(--cor-fundoTable1);
+    color: var(--cor-texto);
+    border: 0.1vh solid var(--cor-borda);
+}
+
+.tema-escuro .select-buscar:focus {
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 0.4vh rgba(26, 69, 121, 0.3);
+}
+
+.tema-escuro .input-busca {
+    background-color: var(--cor-fundoTable1);
+    color: var(--cor-texto);
+    border: 0.1vh solid var(--cor-borda);
+}
+
+.tema-escuro .input-busca::placeholder {
+    color: var(--cor-cinza);
+}
+
+.tema-escuro .input-busca:focus {
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 0.4vh rgba(26, 69, 121, 0.3);
+}
+
+.tema-escuro .filtro-label {
+    color: var(--cor-texto);
+}
+
+.tema-escuro .filtro-checkbx {
+    background-color: var(--cor-fundoTable1);
+    border-color: var(--cor-primaria);
+}
+
+.tema-escuro .filtro-checkbx:checked {
+    background-color: var(--cor-primaria);
+    border-color: var(--cor-primaria);
+}
+
+.tema-escuro .filtro-h1 {
+    color: var(--cor-texto);
+}
+
+.tema-escuro .verde {
+    color: var(--cor-verde);
+}
+
+.tema-escuro .red2 {
+    color: var(--cor-vermelho);
+}
+
+.tema-escuro .button-filtro {
+    background-color: var(--cor-verde);
+    color: white;
+}
+
+.tema-escuro .verde-noticia {
+    color: var(--cor-verde);
+}
+
+.tema-escuro .red2-noticia {
+    color: var(--cor-vermelho);
+}
+
+.tema-escuro .cinza-noticia {
+    color: var(--cor-cinza);
+}
+
+.tema-escuro .red {
+    background-color: var(--cor-vermelho);
+}
+
+.tema-escuro .filtro-ficha {
+    background-color: var(--cor-cinza);
+    color: white;
+}
+
+.tema-escuro .filtro-ficha:hover {
+    background-color: var(--cor-primaria);
+}
+
+.tema-escuro .botao-troca {
+    background-color: var(--cor-fundoTable1);
+    color: var(--cor-texto);
+    border-color: var(--cor-borda);
+}
+
+.tema-escuro .botao-troca.ativo {
+    background-color: var(--cor-verde);
+    color: white;
+}
+
+/* CARDS DE NOTÍCIA - Modo Escuro */
+.tema-escuro .card-noticia {
+    background-color: var(--cor-fundoTable1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tema-escuro .card-noticia:hover {
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+.tema-escuro .card-noticia-label-titulo {
+    color: var(--cor-texto);
+}
+
+.tema-escuro .card-noticia-conteudo label {
+    color: var(--cor-texto);
+}
+
+.tema-escuro .card-noticia-link a {
+    color: var(--cor-primaria);
+}
+
+.tema-escuro .card-noticia-link a:hover {
+    color: var(--cor-secundaria);
+}
+
+.tema-escuro .card-noticia-vazio {
+    color: var(--cor-cinza);
+}
+
+.tema-escuro .texto-noticia {
+    background: rgba(0, 0, 0, 0.8);
+    color: var(--cor-texto);
+}
+
+/* BOTÕES DE AÇÃO - Modo Escuro */
+.tema-escuro .botao-aprovar,
+.tema-escuro .botao-negar {
+    box-shadow: 0 6px 7px rgba(0, 0, 0, 0.2);
+}
+
+.tema-escuro .botao-aprovar:hover,
+.tema-escuro .botao-negar:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* SWEETALERT - Modo Escuro */
+.tema-escuro .swal-title {
+    color: var(--cor-texto);
+}
+
+.tema-escuro .swal-input-textarea {
+    background-color: var(--cor-fundoTable1);
+    color: var(--cor-texto);
+    border: 0.1vh solid var(--cor-borda);
+}
+
+/* SEÇÕES SCROLL - Modo Escuro */
+.tema-escuro .from-ong,
+.tema-escuro .from-noticia,
+.tema-escuro .from-campanha {
+    background-color: var(--cor-fundo2);
+}
+
+/* SCROLLBAR - Modo Escuro (opcional) */
+.tema-escuro .from-ong::-webkit-scrollbar,
+.tema-escuro .from-noticia::-webkit-scrollbar,
+.tema-escuro .from-campanha::-webkit-scrollbar {
+    width: 0.8vh;
+}
+
+.tema-escuro .from-ong::-webkit-scrollbar-track,
+.tema-escuro .from-noticia::-webkit-scrollbar-track,
+.tema-escuro .from-campanha::-webkit-scrollbar-track {
+    background: var(--cor-fundoTable2);
+}
+
+.tema-escuro .from-ong::-webkit-scrollbar-thumb,
+.tema-escuro .from-noticia::-webkit-scrollbar-thumb,
+.tema-escuro .from-campanha::-webkit-scrollbar-thumb {
+    background: var(--cor-primaria);
+    border-radius: 1vh;
+}
+
+.tema-escuro .from-ong::-webkit-scrollbar-thumb:hover,
+.tema-escuro .from-noticia::-webkit-scrollbar-thumb:hover,
+.tema-escuro .from-campanha::-webkit-scrollbar-thumb:hover {
+    background: var(--cor-secundaria);
+}
+/* CHAT - Modo Escuro */
+.tema-escuro body {
+    background: var(--cor-fundo);
+}
+
+.tema-escuro .container {
+    background-color: var(--cor-fundo);
+}
+
+.tema-escuro .contatos {
+    background: var(--cor-fundoTable1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.tema-escuro .type-contatos {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto);
+}
+
+.tema-escuro .contato {
+    background: var(--cor-fundoTable2);
+    color: var(--cor-texto);
+}
+
+.tema-escuro .contato:hover {
+    background: var(--cor-primaria);
+    border-color: var(--cor-primaria);
+}
+
+.tema-escuro .aberto::-webkit-scrollbar-thumb,
+.tema-escuro .fechado::-webkit-scrollbar-thumb {
+    background: var(--cor-primaria);
+}
+
+.tema-escuro .chat {
+    background: var(--cor-fundoTable1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.tema-escuro .top-chat {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto);
+}
+
+.tema-escuro .mensagens {
+    background: var(--cor-fundo);
+}
+
+.tema-escuro .mensagens::-webkit-scrollbar-thumb {
+    background: var(--cor-primaria);
+}
+
+/* BALÕES DE MENSAGEM - Modo Escuro */
+.tema-escuro .u {
+    background: var(--cor-fundoTable2);
+    color: var(--cor-texto);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.tema-escuro .a {
+    background: var(--cor-primaria);
+    color: var(--cor-texto);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* FUNÇÕES - Modo Escuro */
+.tema-escuro .functions {
+    background: var(--cor-fundoTable2);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.tema-escuro .but {
+    color: var(--cor-texto);
+}
+
+.tema-escuro .but:hover {
+    color: var(--cor-primaria);
+}
+
+/* ÁREA DE ENVIO - Modo Escuro */
+.tema-escuro .div-enviar {
+    background: var(--cor-fundoTable2);
+    border-top: 1px solid var(--cor-borda);
+}
+
+.tema-escuro #mensagem {
+    background: var(--cor-fundoTable1);
+    color: var(--cor-texto);
+    border: 0.1vh solid var(--cor-borda);
+}
+
+.tema-escuro #mensagem:focus {
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 0.4vh rgba(26, 69, 121, 0.3);
+}
+
+.tema-escuro #mensagem::placeholder {
+    color: var(--cor-cinza);
+}
+
+.tema-escuro #send {
+    background: var(--cor-primaria);
+    color: var(--cor-texto);
+}
+
+.tema-escuro #final {
+    background: var(--cor-secundaria);
+    color: var(--cor-texto);
+}
+
+/* PLACEHOLDER CHAT VAZIO - Modo Escuro */
+.tema-escuro .text-conversa {
+    color: var(--cor-texto);
+}
+
+.tema-escuro .tudo,
+.tema-escuro .nada {
+    color: var(--cor-cinza);
+}
+
+.tema-escuro .img-conversa {
+    filter: brightness(0.8);
+}
+
+/* HEADER DO CHAT - Modo Escuro */
+.tema-escuro .chat-header {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto);
+}
+
+.tema-escuro .chat-header h2 {
+    color: var(--cor-texto);
+}
+
+/* FORMULÁRIO DE MENSAGEM - Modo Escuro */
+.tema-escuro .mensagem-form {
+    background: var(--cor-fundoTable2);
+    border-top: 1px solid var(--cor-borda);
+}
+
+/* SCROLLBAR GLOBAL - Modo Escuro */
+.tema-escuro ::-webkit-scrollbar-track {
+    background: var(--cor-fundoTable2);
+}
+
+.tema-escuro ::-webkit-scrollbar-thumb {
+    background: var(--cor-primaria);
+}
+
+.tema-escuro ::-webkit-scrollbar-thumb:hover {
+    background: var(--cor-secundaria);
+}
+/* PERFIL ADMINISTRADOR - Modo Escuro */
+.tema-escuro .container-perfil {
+    background-color: var(--cor-fundo);
+}
+
+.tema-escuro .container-from {
+    background: var(--cor-fundoTable1);
+    box-shadow: 0 0.1852vh 0.0926vh rgba(0, 0, 0, 0.3);
+    color: var(--cor-texto);
+}
+
+.tema-escuro .input-field {
+    background-color: var(--cor-fundoTable2);
+    color: var(--cor-texto);
+    border: 0.1vh solid var(--cor-borda);
+}
+
+.tema-escuro .input-field:focus {
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 0.4vh rgba(26, 69, 121, 0.3);
+}
+
+.tema-escuro .input-label {
+    color: var(--cor-texto);
+    background-color: var(--cor-fundoTable1);
+}
+
+.tema-escuro .input-field:disabled {
+    background-color: var(--cor-fundoTable2);
+    color: var(--cor-texto);
+    opacity: 0.6;
+}
+
+.tema-escuro .troca-senha {
+    color: var(--cor-primaria);
+}
+
+.tema-escuro .troca-senha:hover {
+    color: var(--cor-secundaria);
+}
+
+.tema-escuro .botao button {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto);
+}
+
+.tema-escuro .botao button:hover {
+    background-color: var(--cor-secundaria);
+}
+
+/* MODAL TROCAR SENHA - Modo Escuro */
+.tema-escuro .containerTrocarSenha {
+    background-color: var(--cor-fundoTable1);
+}
+
+.tema-escuro .h1-titulo {
+    color: var(--cor-texto);
+}
+
+.tema-escuro .input-field2 {
+    background-color: var(--cor-fundoTable2);
+    color: var(--cor-texto);
+    border: 0.1vh solid var(--cor-borda);
+}
+
+.tema-escuro .input-field2:focus {
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 0.4vh rgba(26, 69, 121, 0.3);
+}
+
+.tema-escuro .input-label2 {
+    color: var(--cor-texto);
+    background-color: var(--cor-fundoTable1);
+}
+
+.tema-escuro .button-from {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto);
+}
+
+.tema-escuro .button-from:hover {
+    background-color: var(--cor-secundaria);
+}
+
+.tema-escuro .error-message {
+    color: var(--cor-vermelho);
+}
+
+/* MODAL TROCAR TEMA - Modo Escuro */
+.tema-escuro .trocaTema {
+    background-color: var(--cor-fundoTable1);
+}
+
+.tema-escuro .tabelaTema {
+    border-color: var(--cor-borda);
+    background-color: var(--cor-fundoTable2);
+}
+
+/* BOTÃO EDITAR - Modo Escuro */
+.tema-escuro .editar img {
+    filter: brightness(0.8);
+}
+
+.tema-escuro .editar:hover {
+    filter: brightness(1.2);
+}
+
+/* SWEETALERT - Modo Escuro */
+.tema-escuro .swal-title {
+    color: var(--cor-texto);
+}
+
+.tema-escuro .swal-modal {
+    background-color: var(--cor-fundoTable1);
+}
+
+.tema-escuro .swal-text {
+    color: var(--cor-texto);
+}
+
+/* OVERLAY DA FOTO - Modo Escuro */
+.tema-escuro .foto-perfil.active .img-perfil:hover::after {
+    color: var(--cor-texto);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.tema-escuro .foto-perfil.active .overlay-text {
+    color: var(--cor-texto);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* BOTÕES DO SWEETALERT - Modo Escuro */
+.tema-escuro .btn-confirm {
+    background-color: var(--cor-primaria) !important;
+    color: var(--cor-texto) !important;
+}
+
+.tema-escuro .btn-cancel {
+    background-color: var(--cor-cinza) !important;
+    color: var(--cor-texto) !important;
+}
+
+/* CAMPOS COM ERRO - Modo Escuro */
+.tema-escuro .input-field2.error {
+    border-color: var(--cor-vermelho);
+    box-shadow: 0 0 0 0.2vh rgba(231, 76, 60, 0.3);
+}
+
+/* PLACEHOLDER - Modo Escuro */
+.tema-escuro .input-field::placeholder {
+    color: var(--cor-cinza);
+}
+
+.tema-escuro .input-field2::placeholder {
+    color: var(--cor-cinza);
+}
+
+/* SCROLLBAR DO MODAL - Modo Escuro */
+.tema-escuro .container-modal::-webkit-scrollbar-track {
+    background: var(--cor-fundoTable2);
+}
+
+.tema-escuro .container-modal::-webkit-scrollbar-thumb {
+    background: var(--cor-primaria);
+}
+
+/* ESTADOS ESPECIAIS - Modo Escuro */
+.tema-escuro .input-field:not(:disabled) {
+    background-color: var(--cor-fundoTable2);
+}
+
+.tema-escuro .input-field:not(:disabled):focus {
+    background-color: var(--cor-fundoTable1);
+}
+
+/* BOTÃO SALVAR DESABILITADO - Modo Escuro */
+.tema-escuro #salva:disabled {
+    background-color: var(--cor-cinza);
+    color: var(--cor-texto);
+    opacity: 0.5;
+}
+
+/* BOTÃO TROCA SENHA DESABILITADO - Modo Escuro */
+.tema-escuro .troca-senha:not(.enabled) {
+    color: var(--cor-cinza);
+    opacity: 0.5;
+}
+
+/* IMAGEM DE PERFIL - Modo Escuro */
+.tema-escuro .img-perfil {
+    border-color: var(--cor-borda);
+}
+
+.tema-escuro .foto-perfil:not(.active) .img-perfil {
+    filter: opacity(40%) brightness(0.8);
+}
+
+.tema-escuro .foto-perfil.active .img-perfil:hover {
+    filter: brightness(60%);
+}
+.tema-escuro .modalBack {
+    background-color: var(--cor-fundo2) !important;
+    color: var(--cor-texto);
+}
+/* SWEETALERT - Modo Escuro */
+.tema-escuro .swal-title {
+    color: var(--cor-texto) !important;
+}
+
+.tema-escuro .swal-modal {
+    background-color: var(--cor-fundoTable1) !important;
+}
+
+.tema-escuro .swal-text {
+    color: var(--cor-texto) !important;
+}
+
+.tema-escuro .swal-content {
+    color: var(--cor-texto) !important;
+}
+
+.tema-escuro .swal-icon--success__line,
+.tema-escuro .swal-icon--success__ring {
+    border-color: var(--cor-verde) !important;
+}
+
+.tema-escuro .swal-icon--error__line {
+    background-color: var(--cor-vermelho) !important;
+}
+
+.tema-escuro .swal-icon--warning__body,
+.tema-escuro .swal-icon--warning__dot {
+    background-color: var(--cor-cinza) !important;
+}
+/* TRANSITIONS PARA NOTIFICAÇÕES */
+/* NOTIFICAÇÕES - Modo Escuro */
+.tema-escuro .modalNotificacao {
+    background-color: var(--cor-fundoTable1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.tema-escuro .tituloModal1 {
+    background-color: var(--cor-primaria);
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.tema-escuro .tituloModal {
+    background-color: var(--cor-fundo2);
+}
+
+.tema-escuro .label-tituloModal {
+    color: var(--cor-texto);
+}
+
+.tema-escuro .subtitulo {
+    border-bottom: 1px solid var(--cor-borda);
+    background-color: var(--cor-fundoTable2);
+}
+
+.tema-escuro .card {
+    background-color: var(--cor-fundoTable2);
+    border-bottom: 1px solid var(--cor-borda);
+    transition: all 0.3s ease-in-out;
+}
+
+.tema-escuro .card:hover {
+    background-color: var(--cor-primaria);
+    transform: translateX(5px);
+}
+
+.tema-escuro .cardLadoB .label-tituloNoticia {
+    color: var(--cor-texto);
+}
+
+.tema-escuro .cardLadoC span {
+    color: var(--cor-cinza);
+}
+
+.tema-escuro .estado-vazio {
+    color: var(--cor-cinza);
+}
+
+.tema-escuro .estado-vazio p {
+    color: var(--cor-cinza);
+}
+
+/* BOLA DE NOTIFICAÇÃO NOVA - Modo Escuro */
+.tema-escuro #bola {
+    background-color: var(--cor-vermelho);
+    color: var(--cor-fundo2);
+}
+
+/* IMAGEM DA NOTIFICAÇÃO - Modo Escuro */
+.tema-escuro .cartaNotifica {
+    border: 1px solid var(--cor-borda);
+}
+
+/* BORDA DO SUBTÍTULO - Modo Escuro */
+.tema-escuro .subtitulo {
+    border-top: 1px solid var(--cor-borda);
+}
+
+/* ESTADO DE CARREGAMENTO - Modo Escuro */
+.tema-escuro .card:hover .label-tituloNoticia {
+    color: var(--cor-texto);
+}
+
+.tema-escuro .card:hover .cardLadoC span {
+    color: var(--cor-texto);
+}
+
+/* SCROLLBAR DO MODAL DE NOTIFICAÇÃO - Modo Escuro */
+.tema-escuro .modalNotificacao::-webkit-scrollbar-track {
+    background: var(--cor-fundoTable2);
+}
+
+.tema-escuro .modalNotificacao::-webkit-scrollbar-thumb {
+    background: var(--cor-primaria);
+    border-radius: 1vh;
+}
+
+.tema-escuro .modalNotificacao::-webkit-scrollbar-thumb:hover {
+    background: var(--cor-secundaria);
+}
+
+/* SINO DE NOTIFICAÇÃO - Modo Escuro */
+.tema-escuro .sino {
+    filter: brightness(0.8);
+}
+
+.tema-escuro .numNoti {
+    background-color: var(--cor-vermelho);
+    color: white;
+}
+
+/* CONTAINER DO SINO - Modo Escuro */
+.tema-escuro .container-sino:hover .sino {
+    filter: brightness(1.2);
+}
+
+/* ANIMAÇÃO PARA NOTIFICAÇÕES NOVAS - Modo Escuro */
+.tema-escuro .card[data-id] {
+    border-left: 3px solid var(--cor-verde);
+}
+
+.tema-escuro .card[data-id]:hover {
+    border-left-color: var(--cor-primaria);
+}
+/* CONTAINERS DOS GRÁFICOS - Modo Escuro */
+.tema-escuro .chart-container,
+.tema-escuro .chart-container2,
+.tema-escuro .chart-containerMapa {
+    background-color: #2C3440 !important;
+    border: 1px solid #4B5563 !important;
+    border-radius: 1vh;
+}
+
+.tema-escuro .grafico {
+    background-color: #23283000 !important;
+}
+
+.tema-escuro .container-grafico-mapa h3 {
+    color: #E5E7EB !important;
+}
+
+/* TEXTO DO PDF */
+.tema-escuro .pdf a {
+    color: #E5E7EB !important;
+    background-color: #ff00fb !important;
+}
+
+.tema-escuro .pdf a:hover {
+    background-color: #1F4E8C !important;
+    color: #E5E7EB !important;
+
+}
+
+.B{
+    filter: var(--cor-iamgem);
+}
+.tema-escuro .c{
+    background-color: transparent !important;
+}
+
+.criarNoticia {
+    background-color: var(--cor-fundo2) !important;
+    color: var(--cor-texto) !important;
+}
+
+.inputText {
+    background-color: var(--cor-fundo) !important;
+    color: var(--cor-texto) !important;
+}
+
+.conteudoNoticia {
+    background-color: var(--cor-fundo) !important;
+    color: var(--cor-texto) !important; 
+}

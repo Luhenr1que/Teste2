@@ -1,0 +1,221 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 10vh;
+    height: 100vh;
+    width: 100vw;
+}
+.container{
+    background-color: #fff;
+    width: 23%;
+    height: 90%;
+    border: 0.3vh solid #000000;
+    border-radius: 5vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.351);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 2vh;
+}
+.chat{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+.chat-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6vh;
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    padding: 1vh;
+    font-size: 1.5vh;
+    border-radius: 2vh 2vh 0 0;
+}
+.chat-messages{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: #e9ecef;
+    padding: 1vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-size: 2vh;
+    gap: 2vh;
+}
+.chat-messages::-webkit-scrollbar {
+    width: 8px; /* largura da barra de rolagem */
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background: #e9ecef; /* cor do trilho */
+    border-radius: 4px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background-color: #007bff; /* cor do "dedo" */
+    border-radius: 4px;
+    border: 2px solid #e9ecef; /* cria espaçamento visual */
+}
+
+.chat-messages::-webkit-scrollbar-button {
+    display: none; /* remove as setinhas */
+}
+.mensagem-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+    width: 100%;
+    background-color: #f8f9fa;
+    border-radius: 0 0 2vh 2vh;
+}
+#mensagem {
+    width: 80%;
+    height: 4vh;
+    border: 0.1vh solid #ced4da;
+    border-radius: 1vh 0vh 0vh 1vh;
+    padding: 1vh;
+    font-size: 1.2vh;
+    line-height: 1.5em; /* define altura da linha */
+    max-height: calc(1.5em * 3); /* máximo 3 linhas */
+    overflow-y: hidden; /* começa sem scroll */
+    resize: none;
+    transition: 0.2s;
+}
+#mensagem:focus{
+    outline: none;
+    border-color: #80bdff;
+    box-shadow: 0 0 2px rgba(0, 123, 255, 0.5);
+}
+#mensagem::-webkit-scrollbar {
+    width: 6px; /* largura da barra de rolagem */
+}
+
+#mensagem::-webkit-scrollbar-track {
+    background: #f0f0f0; /* cor do fundo */
+    border-radius: 3px;
+}
+
+#mensagem::-webkit-scrollbar-thumb {
+    background-color: #007bff; /* cor do "dedo" */
+    border-radius: 3px;
+    border: 1px solid #f0f0f0;
+}
+
+#mensagem::-webkit-scrollbar-button {
+    display: none; /* remove as setinhas */
+}
+#send {
+    width: 20%;
+    min-height: 4vh;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0 1vh 1vh 0;
+    font-size: 1.2vh;
+    cursor: pointer;
+}
+.config{
+    display: flex;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    gap: 2vh;
+    transition: 0.5s;
+}
+.u {
+    align-self: flex-start;
+    background-color: #959595;
+    padding: 1.2vh 1.5vh;
+    border-radius: 1vh;
+    max-width: 70%;
+    word-break: break-word;
+    font-family: Arial, sans-serif;
+}
+.a {
+    justify-self: flex-end;
+    align-self: flex-end;
+    background-color: #448fe0;
+    padding: 1.2vh 1.5vh;
+    border-radius: 1vh;
+    max-width: 70%;
+    word-break: break-word;
+    font-family: Arial, sans-serif;
+}
+.functions{
+    font-size: 1.5vh;
+    display: none;
+    height: auto;
+    width: auto;
+    gap: 1vh;
+    color: #fff;
+    background-color: #007bff;
+    padding: 1vh;
+    border-radius: 1vh;
+    transition: 2s all;
+}
+.config:hover .functions{
+    display: flex;
+    color: #000000;
+}
+.but{
+    cursor: pointer;
+}
+
+.contatos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+    background-color: #000000;
+    color: #e9ecef;
+    height: 100%;
+    width: 30vh;
+}
+.conversa{
+    cursor: pointer;
+    border: 2px #fff solid;
+    border-radius: 1vh;
+    padding: 1vh 2vh;
+}
+
+.editar {
+    border: none;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: #00000066;
+    padding: 20vh 30vw;
+}
+.container-edit {
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    width: 40vw;
+    background: #fff;
+    border-radius: 2vh;
+    box-shadow: 0vh 1vh 4vh #00000067;
+    animation: aparecer 0.25s ease;
+}
+@keyframes aparecer {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

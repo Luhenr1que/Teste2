@@ -1,0 +1,262 @@
+/* CSS otimizado e limpo – classes não utilizadas removidas e layout corrigido */
+
+/* ------------------------------- RESET ------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    background: #eef3f9;
+    overflow: hidden;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    height: 88vh;
+    padding: 4vh;
+    display: flex;
+}
+
+/* ------------------------------- CONTATOS ------------------------------- */
+.contatos {
+    width: 26vh;
+    background: #fff;
+    border-radius: 1.5vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    box-shadow: 0 0 10px #0001;
+    margin-right: 2vh;
+}
+
+.type-contatos {
+    background-color: #1a4579;
+    padding: 1.5vh;
+    text-align: center;
+    color: #fff;
+    font-size: 2.2vh;
+    font-weight: 600;
+}
+
+.contato {
+    padding: 1.5vh;
+    margin: 1vh;
+    background: #f5f8fc;
+    border-radius: 1vh;
+    cursor: pointer;
+    font-size: 2vh;
+    font-weight: 500;
+    transition: .2s;
+}
+
+.contato:hover {
+    background: #e3ecfa;
+    border-color: #c8d7f2;
+    transform: translateX(3px);
+}
+
+.aberto, .fechado {
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 1vh;
+}
+
+.aberto::-webkit-scrollbar,
+.fechado::-webkit-scrollbar {
+    width: 0.5556vh;
+}
+.aberto::-webkit-scrollbar-thumb,
+.fechado::-webkit-scrollbar-thumb {
+    background: #b8c6db;
+    border-radius: 0.7407vh;
+}
+
+/* ------------------------------- CHAT AREA ------------------------------- */
+.chat {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border-radius: 1.5vh;
+    overflow: hidden;
+    box-shadow: 0 0 10px #0001;
+}
+
+.top-chat {
+    height: 10vh;
+    background-color: #1a4579;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.2vh;
+    font-weight: 600;
+}
+
+.info-contato{
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.mensagens {
+    flex: 1;
+    padding: 2vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
+    background: #f6f9ff;
+}
+
+.mensagens::-webkit-scrollbar {
+    width: 0.7407vh;
+}
+.mensagens::-webkit-scrollbar-thumb {
+    background: #6a8bbf;
+    border-radius: 0.3704vh;
+}
+
+/* ------------------------------- BALÕES ------------------------------- */
+.config {
+    display: flex;
+    align-items: center;
+    gap: 1vh;
+}
+
+.u, .a {
+    padding: 1.4vh 2vh;
+    max-width: 65%;
+    border-radius: 1.1111vh;
+    font-size: 2vh;
+    box-shadow: 0px 2px 6px #0002;
+}
+
+.u {
+    background: #e0e6f1;
+    color: #333;
+}
+
+.a {
+    background: #448fe0;
+    color: #fff;
+}
+
+/* ------------------------------- FUNÇÕES ------------------------------- */
+.functions {
+    display: none;
+    font-size: 1.6vh;
+    gap: 0.8vh;
+    background: #ffffff;
+    padding: 0.6vh 0.8vh;
+    border-radius: 0.6vh;
+    box-shadow: 0 2px 6px #0002;
+}
+
+.config:hover .functions {
+    display: flex;
+}
+
+.but {
+    cursor: pointer;
+    color: #243659;
+    font-weight: 500;
+}
+.but:hover {
+    color: #0a58ca;
+}
+
+/* ------------------------------- ENVIAR MENSAGEM ------------------------------- */
+.div-enviar {
+    height: 9vh;
+    padding: 1vh 2vh;
+    background: #edf2fa;
+    border-top: 1px solid #d0d8e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#mensagem {
+    resize: none;
+    border-radius: 1vh;
+    font-size: 2vh;
+    background: #fff;
+    border: none;
+    outline: none;
+    height: 80%;
+    width: 70%;
+    padding-top: 1.5vh;
+    padding-left: 1vh;
+    transition: all 0.2s ease-in-out;
+}
+
+#mensagem:focus{
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 0.4vh #4A90E233;
+    outline: none;
+}
+
+#send {
+    background: #1a4579;
+    border: none;
+    width: 7%;
+    height: 70%;
+    border-radius: 1vh;
+    color: #fff;
+    font-size: 2vh;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+#send:hover{
+    transform: translateY(2px);
+    filter: brightness(60%);
+}
+
+#final {
+    background: rgb(0, 34, 85);
+    width: 15%;
+    height: 70%;
+    font-size: 1.8vh;
+    border-radius: 1vh;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+#final:hover{
+    transform: translateY(2px);
+    filter: brightness(60%);
+}
+
+/* ------------------------------- PLACEHOLDER CHAT VAZIO ------------------------------- */
+.img-conversa {
+    width: 14vh;
+    opacity: .7;
+}
+.text-conversa {
+    font-size: 2.6vh;
+    color: #3c4f6b;
+    font-weight: 500;
+}
+
+.div-mensagem{
+    height: 100%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.tudo, .nada{
+    margin-top: 15vh;
+    text-align: center;
+    color: gray;
+    font-size: 2vh;
+}

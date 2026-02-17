@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "Manual Do Imigrante",
+    "slug": "CRUD-M",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/iconManual.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Este aplicativo precisa acessar sua câmera para gravar vídeos.",
+        "NSMicrophoneUsageDescription": "Este aplicativo precisa acessar seu microfone para gravar áudio nos vídeos.",
+        "NSPhotoLibraryUsageDescription": "Este aplicativo precisa acessar sua galeria para salvar vídeos."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "RECORD_AUDIO",
+        "READ_EXTERNAL_STORAGE", 
+        "WRITE_EXTERNAL_STORAGE",
+        "MEDIA_LIBRARY"
+      ],
+      "package": "com.suaempresa.manualdoimigrante"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Permite que o app acesse suas fotos.",
+          "savePhotosPermission": "Permite que o app salve mídia.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ]
+    ]
+  }
+}

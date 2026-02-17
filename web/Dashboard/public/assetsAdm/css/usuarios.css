@@ -1,0 +1,592 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+
+.containerTabela {
+    width: 90%;
+}
+
+/* Tabela KPIS */
+.containerKPIs {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 30vh;
+    gap: 5vh;
+}
+
+.cardA {
+    display: flex;
+    width: 50vh;
+    height: 20vh;
+    border-radius: 5vh;
+    background-color: #1a4579;
+}
+
+.img-icon {
+    width: 10vh;
+    margin-left: 3vh;
+    align-self: center;
+}
+
+.titulos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0.5vh;
+}
+
+.label-card {
+    color: white;
+    font-size: 3.5vh;
+    margin-top: 3vh;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.label-dados {
+    color: white;
+    font-size: 6vh;
+    font-weight: 500;
+    margin-top: 2vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* FIM KPIS */
+
+.inputs {
+    height: 20vh;
+}
+
+.cima {
+    display: flex;
+    height: 50%;
+}
+
+.titulo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.azul {
+    position: absolute;
+    width: 9vh;
+    left: 5vh;
+}
+
+.label-titulo {
+    position: absolute;
+    font-size: 4vh;
+    font-family: 'Poppins', sans-serif;
+    width: 70vh;
+}
+
+.baixo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 50%;
+}
+
+.filtro2 {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 60%;
+    gap: 1vh;
+}
+
+.seletStyle {
+    font-size: 2vh;
+    padding: 1.2vh;
+    padding-left: 1.5vh;
+    border-radius: 1.2vh;
+    border: none;
+    outline: none;
+    color: gray;
+    transition: all 0.3s ease-in-out;
+    width: 20vh;
+    height: auto;
+}
+
+.seletStyle:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 0.4vh #4A90E233;
+    outline: none;
+}
+
+.filtro-usuario {
+    width: 70%;
+    padding: 1.2vh;
+    font-size: 2vh;
+    border-radius: 1.2vh;
+    border: none;
+    outline: none;
+    padding-left: 2vh;
+    transition: all 0.3s ease-in-out;
+}
+
+.filtro-usuario::placeholder {
+    font-size: 2vh;
+    color: gray;
+}
+
+.filtro-usuario:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 0.4vh #4A90E233;
+    outline: none;
+}
+
+/* TABELA COM EFEITO ZEBRADO VERTICAL */
+.tabela-usuarios {
+    width: 100%;
+    border-collapse: collapse;
+    border-top-left-radius: 2vh;
+    border-top-right-radius: 2vh;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
+/* Efeito zebrado HORIZONTAL - Linhas */
+
+/* .tabela-usuarios tbody tr:nth-child(odd) {
+    background-color: #e7f6ff; 
+}
+
+.tabela-usuarios tbody tr:nth-child(even) {
+    background-color: #ffffff; 
+} */
+
+/* Efeito zebrado VERTICAL - Colunas */
+
+.tabela-usuarios td:nth-child(odd),
+.tabela-usuarios th:nth-child(odd) {
+    background-color: #e7f6ff;
+}
+
+.tabela-usuarios td:nth-child(even),
+.tabela-usuarios th:nth-child(even) {
+    background-color: #ffffff;
+}
+
+/* Cabeçalho da tabela */
+.tabela-usuarios thead tr {
+    background-color: #1a4579 !important;
+}
+
+.tabela-usuarios thead th {
+    background-color: #1a4579 !important;
+    padding: 2vh;
+    color: white;
+    border: none;
+
+}
+
+/* Células da tabela */
+.tabela-usuarios td {
+    padding: 2vh;
+    text-align: center;
+    height: 10vh;
+    vertical-align: middle;
+}
+
+/* Larguras específicas para as colunas */
+.th-nome,
+.td-nome {
+    width: 20vh;
+    font-size: 2vh;
+}
+
+.th-condicao,
+.td-condicao {
+    width: 20vh;
+    font-size: 2vh;
+}
+
+.th-email,
+.td-email {
+    width: 40vh;
+    font-size: 2vh;
+}
+
+.th-crm,
+.td-crm {
+    width: 20vh;
+    font-size: 2vh;
+}
+
+.th-cpf,
+.td-cpf {
+    width: 20vh;
+    font-size: 2vh;
+}
+
+.th-status,
+.td-status {
+    width: 20vh;
+    font-size: 2vh;
+}
+
+.th-acoes,
+.td-acoes {
+    width: 20vh;
+    font-size: 2vh;
+}
+
+/* Ações */
+.td-acoes div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.img-efeito {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.img-efeito:hover {
+    transform: scale(1.1);
+}
+
+.img-excluir {
+    width: 3vh;
+}
+
+/* Paginação */
+.paginacao {
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+    font-family: "Poppins", sans-serif;
+}
+
+.paginacao-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+}
+
+.paginacao-info {
+    color: #666;
+    font-weight: 500;
+    font-size: 2vh;
+}
+
+.pagination {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0.3704vh;
+}
+
+.page-item .page-link {
+    padding: 1vh 2vh;
+    border: 0.2vh solid #ddd;
+    text-decoration: none;
+    color: #333;
+    border-radius: 1vh;
+    transition: all 0.3s ease;
+    font-size: 2vh;
+}
+
+.page-item:not(.disabled):not(.active) .page-link:hover {
+    background-color: #f8f9fa;
+    border-color: #1a4579;
+    color: #1a4579;
+}
+
+.page-item.active .page-link {
+    background-color: #1a4579 !important;
+    border-color: #1a4579 !important;
+    color: white !important;
+}
+
+.page-item.disabled .page-link {
+    color: #6c757d;
+    background-color: #f8f9fa;
+    border-color: #dee2e6;
+    cursor: not-allowed;
+}
+
+.erro {
+    text-align: center;
+    padding: 1.8519vh;
+    font-size: 1.4815vh;
+    color: #666;
+}
+
+.page-input {
+    width: 8vh;
+    padding: 1vh 1vh;
+    font-size: 2vh;
+    background: #ffffff;
+    border: 0.3vh solid #1a4579;
+    border-radius: 1vh;
+    text-align: center;
+    outline: none;
+    transition: 0.2s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Remover setinhas do input number */
+.page-input::-webkit-inner-spin-button,
+.page-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.page-input {
+    -moz-appearance: textfield;
+    border: 0.0926vh solid #1a4579;
+
+}
+
+/* Foco elegante */
+.page-input:focus {
+    outline: none;
+}
+
+/* Placeholder */
+.page-input::placeholder {
+    color: #999;
+    font-size: 1.8vh;
+}
+
+
+
+/* MODAL */
+.container-modal-ver {
+    position: fixed;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    font-family: "Poppins", sans-serif;
+}
+
+.container-modal-ver.action {
+    display: flex;
+}
+
+.containerVer {
+    position: relative;
+    display: flex;
+    width: 70%;
+    height: 80%;
+    background-color: white;
+    z-index: 50;
+    border-radius: 3vh;
+    border-bottom-right-radius: 6vh;
+}
+
+.esqueda {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(185, 225, 241);
+    border-top-left-radius: 3vh;
+    border-bottom-left-radius: 3vh;
+}
+
+.container-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 30%;
+}.tituloVer{
+    font-size: 4vh;
+    font-family: 'Poppins', sans-serif;
+    
+}
+.img-perfil {
+    width: 25vh;
+}
+.fotoPerfilUsuario{
+    border-radius: 50%;
+    border: 0.7407vh solid white;
+    width: 21vh;
+    height: 21vh;
+}
+
+.dados-naoEditar {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.input-field {
+    width: 90%;
+    border-radius: 1vh;
+    border: none;
+    font-size: 2vh;
+    padding: 1.5vh;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-label {
+    position: absolute;
+    left: 3vh;
+    top: 1vh;
+    font-size: 2.5vh;
+    color: #575757;
+    transition: all 0.2s;
+    pointer-events: none;
+    padding: 0 0.3704vh;
+}
+
+.input-field:disabled {
+    background-color: white;
+    cursor: not-allowed;
+}
+
+.input-field:focus+.input-label,
+.input-field:not(:placeholder-shown)+.input-label {
+    top: -2.3vh;
+    font-size: 2vh;
+}
+
+
+.direita {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tituloModal {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding-top: 3vh;
+    background-color: white;
+}
+
+.dadosEditar {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.input-container2 {
+    width: 60%;
+    height: 8%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.input-field2 {
+    width: 90%;
+    border-radius: 1vh;
+    border: none;
+    font-size: 2vh;
+    padding: 1.5vh;
+    outline: none;
+    background-color: rgb(211, 211, 211);
+    transition: all 0.2s ease-in-out;
+    color: #0a0a0a;
+}
+
+.input-field2:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 0.4vh #4A90E233;
+    outline: none;
+}
+
+.input-label2 {
+    position: absolute;
+    left: 3vh;
+    top: 1.2vh;
+    font-size: 2.2vh;
+    color: #646464;
+    transition: all 0.2s;
+    pointer-events: none;
+    padding: 0 1vh;
+}
+
+.input-field2:focus+.input-label2,
+.input-field2:not(:placeholder-shown)+.input-label2 {
+    top: -2.6vh;
+    font-size: 2vh;
+}
+
+.flutuante {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+
+}
+
+.flutuante .botao {
+    border: none;
+    font-size: 2vh;
+    width: 20%;
+    height: 65%;
+    border-radius: 1vh;
+    transition: all 0.2s ease-in-out;
+    color: white;
+}
+
+.flutuante .botao:hover {
+    transform: translateY(3px);
+    filter: brightness(80%);
+    cursor: pointer;
+}
+
+.btn-confirm{
+    background-color: #1a4579 !important;
+    color: white !important;
+    padding: 1.5vh 3vh !important;
+    font-size: 2vh !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.btn-cancel{
+    background-color: #616161 !important;
+    color: white !important;
+    padding: 1.5vh 3vh !important;
+    font-size: 2vh !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}

@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.continer-tudo {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+   /*  background-color: #c5d2db; */
+   background-color: #bcbcbc;
+    flex-wrap: wrap;
+
+}
+
+.div-menu {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 20%;
+    background-color: #5c6c88;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.top-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 30%;
+    width: 100%;
+    padding: 1vh;
+}
+
+.div-logo {
+    display: flex;
+    height: 80%;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    height: 80%;
+}
+
+.text-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1vh;
+    width: 100%;
+    font-size: 2.5vh;
+    font-weight: bold;
+}
+
+.label-menu {
+    font-size: 3vh;
+}
+
+.button-menu {
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    width: 100%;
+    align-items: center;
+
+}
+
+.ul-menu {
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    width: 100%;
+    list-style: none;
+    padding: 2vh;
+    gap: 2vh;
+
+}
+
+.li-menu {
+    display: flex;
+    flex-direction: row;
+    height: 7vh;
+    align-items: center;
+    padding: 4vh;
+    gap: 3vh;
+    font-size: 2.2vh;
+    border-radius: 2vh;
+    transition: background-color 0.3s ease;
+}
+
+.li-menu:hover {
+    background-color: #102a62d2;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.icons-menu {
+    height: 3vh;
+}
+
+.container-conteudo {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 80%;
+}
+
+.navbar {
+    display: flex;
+    height: 15%;
+    width: 100%;
+    background-color: #ffffff;
+    flex-wrap: wrap;
+}
+
+.titulo-nav {
+    display: flex;
+    height: 100%;
+    width: 50%;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 7vh;
+    font-weight: 700;
+}
+
+.h1-nav {
+    font-family: 'Poppins', sans-serif;
+    font-size: 5vh;
+    font-weight: 700;
+    color: #222;
+    text-transform: uppercase;
+    letter-spacing: .5vh;
+    text-align: center;
+}
+
+.perfil-nav {
+    display: flex;
+    height: 100%;
+    width: 50%;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 7vh;
+}
+
+.foto-nav {
+    display: flex;
+    height: 10vh;
+    width: 10vh;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.img-nav {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}

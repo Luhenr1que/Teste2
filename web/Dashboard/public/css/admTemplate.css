@@ -1,0 +1,705 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+body {
+    position: relative;
+    display: flex;
+    height: auto;
+    width: auto;
+}
+
+/* Barra Lateral { */
+.barra-lateral {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    min-width: 6vw;
+    width: 6vw;
+    overflow: hidden;
+    padding: 2vh;
+    gap: 2vh;
+    background-color: #1a4579;
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+.barra-lateral:hover {
+    width: 16vw;
+    min-width: 16vw;
+}
+
+.div-logo {
+    display: flex;
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0vh 0vh 6vh 0vh;
+    transition: 0.5s;
+}
+
+.barra-lateral:hover .div-logo {
+    margin: 0vh;
+}
+
+.logo {
+    height: auto;
+    width: 7vh;
+    margin: 0vh;
+    transition: 0.5s;
+}
+
+.barra-lateral:hover .logo {
+    width: 12vh;
+}
+
+.itens {
+    display: flex;
+    padding-top: 2vh;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+    height: 100%;
+    width: 100%;
+}
+
+.navegacao {
+    display: flex;
+    align-items: center;
+    height: 8vh;
+    width: 8vh;
+    padding: 2vh;
+    border-radius: 2vh;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.barra-lateral:hover .navegacao {
+    width: 100%;
+}
+
+.navegacao:hover {
+    background-color: #163149c7;
+}
+
+.icones {
+    position: relative;
+    height: 4vh;
+    width: 4vh;
+}
+
+.text-icones {
+    width: 200vw;
+    position: absolute;
+    margin-left: 20vh;
+    transition: 0.5s;
+    font-size: 2vh;
+}
+
+.barra-lateral:hover .text-icones {
+    margin-left: 6vh;
+}
+
+/* Estilos para o menu de configurações com submenu */
+.configuracoes-menu {
+    position: relative;
+    width: 100%;
+}
+
+.seta-icone {
+    position: absolute;
+    right: 2vh;
+    height: 2vh;
+    width: 2vh;
+    transition: transform 0.3s ease;
+    opacity: 0;
+}
+
+.barra-lateral:hover .seta-icone {
+    opacity: 1;
+}
+
+.submenu {
+    display: none;
+    width: 100%;
+    margin-top: 0.5vh;
+    background-color: #163149;
+    border-radius: 1vh;
+    overflow: hidden;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.submenu-item {
+    display: flex;
+    align-items: center;
+    height: 6vh;
+    width: 100%;
+    padding: 1vh 2vh;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    gap: 1.5vh;
+}
+
+.submenu-item:hover {
+    background-color: #1e5a9e;
+}
+
+.submenu-icone {
+    height: 2.5vh;
+    width: 2.5vh;
+}
+
+.submenu-texto {
+    color: #ffffff;
+    font-size: 1.8vh;
+    font-family: "Poppins", sans-serif;
+    white-space: nowrap;
+}
+
+/* Ajuste para o item de configurações principal */
+.configuracoes-menu .navegacao {
+    position: relative;
+}
+
+/* Ajuste do texto quando a barra lateral está recolhida */
+.barra-lateral:not(:hover) .submenu {
+    display: none !important;
+}
+
+.barra-lateral:not(:hover) .seta-icone {
+    display: none;
+}
+
+/* } Fim Barra Lateral */
+
+.conteudo-template {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Barra Vertical { */
+.barra-vertical {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vh;
+    height: 12vh;
+    width: 100%;
+    background-color: #1a4579;
+}
+
+.fotoI {
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.fotoI:hover {
+    opacity: 0.8;
+}
+
+.div-administrador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 8vh;
+    width: 8vh;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.adminidtrador {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.titulo-page {
+    /* font-family: "Poppins", sans-serif; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 5vh;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.ladoB {
+    display: grid;
+    grid-template-columns: auto auto 1fr auto;
+    align-items: center;
+    justify-content: end;
+    gap: 2vh;
+    padding: 0.4vh;
+    position: relative; /* Adicionado */
+}
+
+.container-sino {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    height: 7vh;
+    width: 7vh;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+.container-sino:hover {
+    background-color: #163149c7;
+}
+
+.sino {
+    width: 4vh;
+    height: 4vh;
+}
+
+.numNoti {
+    position: absolute;
+    top: 0.6vh; /* Ajustado */
+    left: 3vh; /* Ajustado */
+    width: 2.5vh;
+    height: 2.5vh;
+    background-color: red;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 50%;
+    font-size: 1.6vh;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    text-align: center;
+    padding-top: 0.2vh;
+}
+
+.nome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.label-adm {
+    font-size: 2vh;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* } Fim Barra Vertical */
+
+/* inicio do modal de notificacao */
+.containerNotificacao {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.modalNotificacao {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: calc(8% + 1vh); /* Abaixo do container-sino */
+    right: 35vh;
+    width: 50vh;
+    height: 65vh;
+    background-color: white;
+    border-radius: 1vh;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.tituloModal1 {
+    width: 100%;
+    height: 5vh;
+    padding-left: 2.5vh;
+    border-bottom: 0.2vh solid #e1e1e1;
+    display: flex;
+    align-items: center;
+    background-color: #fcfcfc;
+}
+#label-tituloModalP{
+    font-weight: 750;
+}
+.label-tituloModal {
+    font-size: 2.1vh;
+    font-family: "Poppins", sans-serif;
+    color: #333;
+    font-weight: 500;
+}
+
+.conteudo {
+    height: calc(100% - 60px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.conteudo::-webkit-scrollbar {
+    width: 0.7vh;
+}
+
+.conteudo::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.conteudo::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+}
+
+.conteudo::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+.subtitulo {
+    padding-top: 1.4vh;
+    padding-bottom: 0.7vh;
+    padding-left: 2.5vh;
+    display: flex;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 10vh;
+    padding: 4vh 3vh;
+    transition: background-color 0.2s ease;
+    gap: 12px;
+}
+
+.card:hover {
+    background-color: #cccccc;
+    cursor: pointer;
+}
+
+.card:last-child {
+    border-bottom: none;
+}
+
+.cardLadoA {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2vh;
+}
+
+#bola {
+    height: 0.4vh;
+    width: 0.4vh;
+    background-color: #1486d1;
+    border-radius: 50%;
+    color: transparent;
+    margin-right: 1vh;
+}
+
+.cardLadoA:hover,
+.cardLadoB:hover,
+.cardLadoC:hover {
+    cursor: pointer;
+}
+
+.cartaNotifica {
+    width: 100%;
+    border-radius: 1vh;
+}
+
+.cardLadoB {
+    flex: 1;
+    min-width: 0;
+}
+
+.label-tituloNoticia {
+    text-align: left;
+    font-size: 2vh;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: #333;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 0;
+}
+
+.label-tituloNoticia:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.cardLadoC {
+    width: 10%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #6c757d;
+    font-size: 2vh;
+}
+
+/* Estado vazio */
+.estado-vazio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 3.7037vh 1.8519vh;
+    text-align: center;
+    color: #6c757d;
+}
+
+.estado-vazio img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 16px;
+    opacity: 0.5;
+}
+
+.estado-vazio p {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Scroll */
+::-webkit-scrollbar {
+    width: 0.4vw;
+    height: 1vh;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 1vh;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1a4579;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0a2444;
+}
+
+
+
+/* Estilos para o menu de configurações com submenu */
+.configuracoes-menu {
+    position: relative;
+    width: 100%;
+}
+
+.seta-icone {
+    position: absolute;
+    right: 2vh;
+    height: 2vh;
+    width: 2vh;
+    transition: transform 0.3s ease;
+    opacity: 0;
+}
+
+.barra-lateral:hover .seta-icone {
+    opacity: 1;
+}
+
+.seta-icone.rotated {
+    transform: rotate(180deg);
+}
+
+.configuracoes-main.active {
+    background-color: #163149c7 !important;
+}
+
+.submenu {
+    display: none;
+    width: 100%;
+    margin-top: 0.5vh;
+    background-color: #163149;
+    border-radius: 1vh;
+    overflow: hidden;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.submenu-item {
+    display: flex;
+    align-items: center;
+    height: 6vh;
+    width: 100%;
+    padding: 1vh 2vh;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    gap: 1.5vh;
+}
+
+.submenu-item:hover {
+    background-color: #0c223b;
+}
+
+.submenu-icone {
+    height: 2.5vh;
+    width: 2.5vh;
+}
+
+.submenu-texto {
+    color: #ffffff;
+    font-size: 1.8vh;
+    font-family: "Poppins", sans-serif;
+    white-space: nowrap;
+}
+
+/* Ajuste para o item de configurações principal */
+.configuracoes-menu .navegacao {
+    position: relative;
+}
+
+/* Ajuste do texto quando a barra lateral está recolhida */
+.barra-lateral:not(:hover) .submenu {
+    display: none !important;
+}
+
+.barra-lateral:not(:hover) .seta-icone {
+    display: none;
+}
+
+/* Garantir que o ícone fique preenchido quando ativo */
+.configuracoes-main.active .icones {
+    filter: brightness(0) invert(1); /* Torna o ícone branco */
+}
+
+.legal{
+    position: relative;
+    width: 100%;
+}
+
+/* Toggle */
+.toggle {
+    position: relative;
+    width: 9.5vh;
+    height: 4.3vh;
+    background: #727272;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.toggle .ball {
+    position: absolute;
+    width: 4vh;
+    height: 4vh;
+    background: #fff;
+    border-radius: 50%;
+    top: 0.1vh;
+    left: 0.1vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.iconSwitch {
+    width: 3vh;
+    height: 3vh;
+    pointer-events: none;
+}
+
+.toggle.ativo {
+    background: #4071ad;
+}
+
+.toggle.ativo .ball {
+    transform: translateX(5.5vh);
+}
+
+/*Estilização da Notificacao user*/
+.dadosNotificacaoUser {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5vh;
+    width: 100%;
+    overflow: hidden;
+}
+.nomeUser {
+    font-size: 2.1vh;
+    font-weight: 600;
+    color: #1a1a1a;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.textUser {
+    font-size: 1.8vh;
+    color: #5a5a5a;
+    line-height: 2.2vh;
+    max-height: 4.4vh;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.div-img-user {
+    height: 7vh;
+    width: 7vh;
+    min-width: 7vh;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dcdcdc;
+}
+.imgUser {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+}
+.card:hover .imgUser {
+    transform: scale(1.05);
+}

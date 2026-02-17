@@ -1,0 +1,73 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 88vh;
+    padding: 2vh;
+}
+
+.containerAparecencia {
+    display: flex;
+    width: 80%;
+    height: auto;
+    gap: 3vh;
+    justify-content: space-around;
+    padding: 3vh;
+    border-radius: 2vh;
+    background: var(--cor-fundo, #f0f4ff);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: .3s;
+}
+
+.cardEscolherTema {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    width: 30%;
+    cursor: pointer;
+    user-select: none;
+}
+
+.legenda h2 {
+    font-size: 3vh;
+    font-weight: bold;
+    color: var(--cor-texto, #2b2b2b);
+}
+
+.cardTema {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2vh;
+    margin-top: 2vh;
+    width: 80%;
+    height: 35vh;
+    background: white;
+    border: 3px solid transparent;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: transform .2s, box-shadow .3s, border-color .3s;
+}
+
+.cardTema:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.cardTema.ativo {
+    border-color: #1a4579;
+    box-shadow: 0 0 20px rgba(0, 102, 255, 0.5);
+    transform: scale(1.06);
+}
+
+.icon {
+    width: 12vh;
+    opacity: .9;
+    transition: .3s;
+}
+
+.cardTema:hover .icon {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+

@@ -1,0 +1,27 @@
+@font-face{
+    font-family: 'Packy';
+    src: url('../fontes/PackyGreat.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Sans';
+    src: url('../fontes/LiberationSans-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fontes/Poppins-Light.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Exo';
+    src: url('../fontes/Exo2-Regular.otf') format('opentype');
+    font-style: normal;
+    font-weight: normal;
+}

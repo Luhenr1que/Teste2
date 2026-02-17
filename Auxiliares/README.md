@@ -10,6 +10,7 @@ Esta pasta contém módulos e funcionalidades auxiliares utilizadas no projeto p
 * **Camera** → Recursos de captura de imagem e integração com câmera.
 * **Chat** → Sistema de mensagens e interação.
 * **Geolocalização** → Funcionalidades de geolocalização.
+* **Gravador** → Gravador e Tradutor.
 * **AquaDevHome** → Site da empresa.
 
 ---

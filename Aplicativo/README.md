@@ -1,62 +1,119 @@
-# ATENÇÃO
+# 📱 Nome do App
 
-Para o funcionamento do projeto entre na pasta do manual do imigrante e de **npm install**
-Logo em seguida entre na pasta do CRUD e de **composer install**
-Para o funcionamento do banco de dados entre na pasta do crud e de **php artisan serve --host=0.0.0.0 --port=8000**
-E para inicar o aplicativo **npx expo start**
+Aplicativo mobile desenvolvido em **React Native + Expo**, com navegação estruturada, animações modernas, armazenamento local e integração com recursos nativos do dispositivo.
 
-Assim ele ira baixar tudo necessario iniciara o banco e o projeto sem problemas.
-obs: se der erro procure no chatgpt, pois provavelmente tem que configurar para o seu ip.
-obs 2: tenha 2 cmds aberto.
-NÃO ESQUEÇA DE ABRIR O XAMPP E DAR O COMANDO DE MIGRATION
+---
 
-Ass - Jhonny <3 - vlw Jhonny
-Mail::to('manualdoimigrante@gmail.com')->send(new App\Mail\VerificarEmail('Teste', 'ricardodossantosfaustino81@gmail.com')); 
+# 🚀 Tecnologias Utilizadas
 
-# BIBLIOTECAS - FRONTEND
+* React Native
+* Expo
+* React Navigation
+* AsyncStorage
+* Reanimated
+* Expo APIs (Camera, AV, Media Library)
+* Animações e componentes customizados
 
+---
+
+# 📦 Instalação
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/seu-usuario/seu-repositorio.git
+cd nome-do-projeto
+```
+
+Instale as dependências:
+
+```bash
+npm install
+```
+
+Execute o projeto:
+
+```bash
+npx expo start
+```
+
+---
+
+# 📚 Bibliotecas - Frontend
+
+## 🎨 Animações
+
+```bash
 npm install react-native-reanimated
-
 npm install react-native-animatable
+npm install react-native-reanimated-carousel
+```
 
+## 🧭 Navegação
+
+```bash
 npm install @react-navigation/native
+npm install @react-navigation/native-stack
+npm install @react-navigation/bottom-tabs
+```
 
-@react-navigation/native-stack
+Dependências necessárias:
 
-npm install react-native-screens react-native-safe-area-context react-native-gesture-handler react-native-reanimated
+```bash
+npm install react-native-screens
+npm install react-native-safe-area-context
+npm install react-native-gesture-handler
+npm install react-native-vector-icons
+```
 
-@react-native-async-storage/async-storage
+---
 
-expo-font
+## 💾 Armazenamento Local
 
-react-native-reanimated-carousel 
+```bash
+npm install @react-native-async-storage/async-storage
+```
 
-npm install react-native-keyboard-aware-scroll-view
+---
 
-npm install @react-native-picker/picker
+## 🎨 UI e Componentes
 
+```bash
 npm install expo-linear-gradient
-
-npm install react-native-screens react-native-safe-area-context react-native-gesture-handler react-native-reanimated react-native-vector-icons
-
-npm install @react-navigation/native @react-navigation/bottom-tabs
-
+npm install @react-native-picker/picker
+npm install react-native-keyboard-aware-scroll-view
 npm install react-native-country-picker-modal
-
 npm install react-async-hook
+npm install expo-font
+```
 
+---
 
+# 📷 Bibliotecas - Backend (Recursos Nativos / Expo APIs)
 
-Ass - Luis 😎
+## 📸 Câmera
 
-# BIBLIOTECAS - BACKEND
-
-npm install expo-media-library
-
-npm install react-native-camera
-
+```bash
 npm install expo-camera
+npm install react-native-camera
+```
 
-npm install expo-av
+## 🖼 Manipulação de Imagem
 
+```bash
 npm install expo-image-manipulator
+```
+
+## 🎥 Áudio e Vídeo
+
+```bash
+npm install expo-av
+```
+
+## 📁 Galeria
+
+```bash
+npm install expo-media-library
+```
+
+Desenvolvedor Mobile | React Native | JavaScript
